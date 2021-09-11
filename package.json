@@ -1,0 +1,33 @@
+{
+  "name": "classnotification",
+  "version": "1.0.0",
+  "description": "sample class app notification",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel index.js -d dist",
+    "start": "npm run build && nodemon dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Veri5ied/classnotification.git"
+  },
+  "author": "team 7",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Veri5ied/classnotification/issues"
+  },
+  "homepage": "https://github.com/Veri5ied/classnotification#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21"
+  }
+}
