@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel index.js -d dist",
+    "build": "babel src -d dist",
     "start": "npm run build && nodemon dist/index.js"
   },
   "repository": {
@@ -25,9 +25,12 @@
     "nodemon": "^2.0.12"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "web-push": "^3.4.5"
   }
 }
