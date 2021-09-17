@@ -1,21 +1,17 @@
 const publicVapidKey =
   "BGjj11BqxvyQBVjCJv0re2RQCraaFP3vGvwaA6nP4Tt65vgNjfF7Voy24EpYMswSYCMf6eiNIRfS2hk1n92-_wY";
 
-// Check for service worker
 if ("serviceWorker" in navigator) {
   send().catch((err) => console.error(err));
 }
 
-// Register SW, Register Push, Send Push
 async function send() {
-  // Register Service Worker
   console.log("Registering service worker...");
   const register = await navigator.serviceWorker.register("/worker.js", {
     scope: "/",
   });
   console.log("Service Worker Registered...");
 
-  // Register Push
   console.log("Registering Push...");
   const subscription = await register.pushManager.subscribe({
     userVisibleOnly: true,
@@ -23,7 +19,6 @@ async function send() {
   });
   console.log("Push Registered...");
 
-  // Send Push Notification
   console.log("Sending Push...");
   await fetch("/subscribe", {
     method: "POST",
