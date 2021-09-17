@@ -5,6 +5,6 @@ self.addEventListener("push", e => {
   console.log("Push Recieved...");
   self.registration.showNotification(data.title, {
     body: "Notified by COS 333 Team 7!",
-    icon: "http://image.ibb.co/frYOFd/tmlogo.png"
+    icon: "",
   });
 });
