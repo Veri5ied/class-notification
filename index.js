@@ -2,6 +2,9 @@ const express = require("express");
 const webpush = require("web-push");
 const bodyParser = require("body-parser");
 const path = require("path");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const app = express();
 
@@ -9,9 +12,8 @@ app.use(express.static(path.join(__dirname, "client")));
 
 app.use(bodyParser.json());
 
-const publicVapidKey =
-  "BGjj11BqxvyQBVjCJv0re2RQCraaFP3vGvwaA6nP4Tt65vgNjfF7Voy24EpYMswSYCMf6eiNIRfS2hk1n92-_wY";
-const privateVapidKey = "kI_phBopIui4lhfUvzvkh2u8ly4k1Y53XGHsG3jH0jA";
+const publicVapidKey = process.env.publicVapidKey;
+const privateVapidKey = process.env.privateVapidKey;
 
 webpush.setVapidDetails(
   "mailto:test@test.com",

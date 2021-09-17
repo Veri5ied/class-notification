@@ -1,5 +1,4 @@
-const publicVapidKey =
-  "BGjj11BqxvyQBVjCJv0re2RQCraaFP3vGvwaA6nP4Tt65vgNjfF7Voy24EpYMswSYCMf6eiNIRfS2hk1n92-_wY";
+const publicVapidKey = process.env.publicVapidKey;
 
 if ("serviceWorker" in navigator) {
   send().catch((err) => console.error(err));
